@@ -46,7 +46,7 @@ export default function AboutUsPage() {
             <div className="relative">
               <div className="relative bg-gradient-to-br from-amber-100 to-orange-200 rounded-3xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <img 
-                  src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  src="/images/gem4.jpg" 
                   alt="Luxury jewelry collection" 
                   className="w-full h-96 object-cover rounded-2xl shadow-2xl"
                 />
@@ -250,7 +250,7 @@ export default function AboutUsPage() {
               <div className="bg-gradient-to-br from-amber-600 via-orange-500 to-pink-500 rounded-3xl p-1">
                 <div className="bg-black rounded-3xl overflow-hidden relative">
                   <img 
-                    src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                    src="images/gem5.jpg" 
                     alt="Behind the scenes" 
                     className="w-full h-80 object-cover opacity-70"
                   />

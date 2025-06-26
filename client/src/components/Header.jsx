@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Gem, ShoppingBag, User } from 'lucide-react';
-import { useCart } from '../contexts/CartContext';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Gem, ShoppingBag, User } from "lucide-react";
+import { useCart } from "../contexts/CartContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +20,9 @@ const Header = () => {
               <Gem className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-2xl font-serif font-bold text-navy-800">GemShine</h1>
+              <h1 className="text-2xl font-serif font-bold text-navy-800">
+                GemShine
+              </h1>
               <p className="text-xs text-gray-500 -mt-1">Since 1998</p>
             </div>
           </Link>
@@ -30,39 +32,40 @@ const Header = () => {
             <Link
               to="/"
               className={`font-medium transition-colors duration-200 ${
-                isActive('/') 
-                  ? 'text-primary-600 border-b-2 border-primary-600 pb-1' 
-                  : 'text-gray-700 hover:text-primary-600'
+                isActive("/")
+                  ? "text-primary-600 border-b-2 border-primary-600 pb-1"
+                  : "text-gray-700 hover:text-primary-600"
               }`}
             >
               Home
             </Link>
             <Link
-              to="/products"
-              className={`font-medium transition-colors duration-200 ${
-                isActive('/products') 
-                  ? 'text-primary-600 border-b-2 border-primary-600 pb-1' 
-                  : 'text-gray-700 hover:text-primary-600'
-              }`}
-            >
-              Products
-            </Link>
-            <Link
               to="/about"
               className={`font-medium transition-colors duration-200 ${
-                isActive('/about') 
-                  ? 'text-primary-600 border-b-2 border-primary-600 pb-1' 
-                  : 'text-gray-700 hover:text-primary-600'
+                isActive("/about")
+                  ? "text-primary-600 border-b-2 border-primary-600 pb-1"
+                  : "text-gray-700 hover:text-primary-600"
               }`}
             >
               About
             </Link>
             <Link
+              to="/products"
+              className={`font-medium transition-colors duration-200 ${
+                isActive("/products")
+                  ? "text-primary-600 border-b-2 border-primary-600 pb-1"
+                  : "text-gray-700 hover:text-primary-600"
+              }`}
+            >
+              Products
+            </Link>
+
+            <Link
               to="/contact"
               className={`font-medium transition-colors duration-200 ${
-                isActive('/contact') 
-                  ? 'text-primary-600 border-b-2 border-primary-600 pb-1' 
-                  : 'text-gray-700 hover:text-primary-600'
+                isActive("/contact")
+                  ? "text-primary-600 border-b-2 border-primary-600 pb-1"
+                  : "text-gray-700 hover:text-primary-600"
               }`}
             >
               Contact
@@ -92,7 +95,11 @@ const Header = () => {
               className="md:hidden p-2 text-gray-600 hover:text-primary-600 transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -104,34 +111,43 @@ const Header = () => {
               <Link
                 to="/"
                 className={`px-4 py-3 font-medium transition-colors ${
-                  isActive('/') ? 'text-primary-600 bg-primary-50' : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                  isActive("/")
+                    ? "text-primary-600 bg-primary-50"
+                    : "text-gray-700 hover:text-primary-600 hover:bg-gray-50"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
+                to="/about"
+                className={`px-4 py-3 font-medium transition-colors ${
+                  isActive("/about")
+                    ? "text-primary-600 bg-primary-50"
+                    : "text-gray-700 hover:text-primary-600 hover:bg-gray-50"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </Link>
+
+              <Link
                 to="/products"
                 className={`px-4 py-3 font-medium transition-colors ${
-                  isActive('/products') ? 'text-primary-600 bg-primary-50' : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                  isActive("/products")
+                    ? "text-primary-600 bg-primary-50"
+                    : "text-gray-700 hover:text-primary-600 hover:bg-gray-50"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Products
               </Link>
               <Link
-                to="/about"
-                className={`px-4 py-3 font-medium transition-colors ${
-                  isActive('/about') ? 'text-primary-600 bg-primary-50' : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link
                 to="/contact"
                 className={`px-4 py-3 font-medium transition-colors ${
-                  isActive('/contact') ? 'text-primary-600 bg-primary-50' : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                  isActive("/contact")
+                    ? "text-primary-600 bg-primary-50"
+                    : "text-gray-700 hover:text-primary-600 hover:bg-gray-50"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
